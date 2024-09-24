@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NHOMS2</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="answers-left">
+            <h3>Câu trả lời</h3>
+            <ul id="correct-answers-list"></ul>
+        </div>
+        <div class="game-area">
+            <div class="game-title">TRÒ CHƠI Ô CHỮ</div>
+            <div class="container">
+                <img src="images/AI.jpg" alt="Background Image" class="image">
+                <div class="overlay">
+                    <div class="overlay-item" onclick="showPopup('Thuật ngữ cho việc sử dụng nhiều thiết bị kết nối trong nhà?', 'IOT', 0, 'images/iot.jpg')">1</div>
+                    <div class="overlay-item" onclick="showPopup('Tên của loại xe có khả năng tự điều khiển mà không cần tài xế?', 'XE TU LAI', 1)">2</div>
+                    <div class="overlay-item" onclick="showPopup('Chatbot AI phổ biến nhất hiện nay đối với học sinh sinh viên?', 'CHATGPT', 2, 'images/chatbot.jpg')">3</div>
+                    <div class="overlay-item" onclick="showPopup('Công nghệ mô phỏng môi trường thực tế trong thế giới ảo?', 'VR', 3)">4</div>
+                    <div class="overlay-item" onclick="showPopup('Đây là một loại thuật toán tối ưu hóa sử dụng để tìm nghiệm tốt nhất bằng cách bắt chước quá trình chọn lọc tự nhiên?', 'THUAT TOAN DI TRUYEN', 4, 'images/generic algorithm.jpg')">5</div>
+                    <div class="overlay-item" onclick="showPopup('Ngôn ngữ lập trình được sử dụng rộng rãi để phát triển các mô hình trí tuệ nhân tạo và học máy?', 'PYTHON', 5, 'images/python.jpg')">6</div>
+                    <div class="overlay-item" onclick="showPopup('Kỹ thuật giúp nhận diện khuôn mặt được gọi là?', 'FACE ID', 6, 'images/face id.png')">7</div>
+                    <div class="overlay-item" onclick="showPopup('Tên của công cụ dịch máy do Google phát triển, có thể dịch ngôn ngữ tự động bằng trí tuệ nhân tạo?', 'GOOGLE TRANSLATE', 7)">8</div>
+                    <div class="overlay-item" onclick="showPopup('Tên của trợ lý ảo do Google phát triển, có thể trả lời câu hỏi và điều khiển thiết bị thông minh?', 'GOOGLE ASSISTANT', 8)">9</div>
+                </div>
+            </div>
+            <div id="popup" class="popup">
+                <h2 id="question">Câu hỏi</h2>
+                <img id="question-image" class="question-image" src="" alt="Hình ảnh câu hỏi" style="display: none;">
+                <div id="answer-field" class="answer-field"></div>
+                <div class="button-group">
+                    <button class="close" onclick="closePopup()">Đóng</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div id="result-area">
+                <h2>Đây là cái gì?</h2>
+                <div id="result-field"></div>
+                <button onclick="checkResult()">Kiểm tra</button>
+            </div>
+        </div>
+    </div>
+    <script src="minigame.js"></script>
+</body>
+</html>
